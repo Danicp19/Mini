@@ -56,7 +56,7 @@ function editItem(event: Event, column: Column, listIndex: number) {
 </script>
 
 <template>
-  <div class="flex flex-row justify-center space-x-6 pt-10 w-full h-full">
+  <div class="flex flex-row justify-center w-full h-full">
     <div
       v-for="column of data.columns"
       :key="column.name"
