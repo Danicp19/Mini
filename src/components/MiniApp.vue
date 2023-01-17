@@ -56,11 +56,11 @@ function editItem(event: Event, column: Column, listIndex: number) {
 </script>
 
 <template>
-  <div class="flex flex-row justify-center space-x-6 pt-10">
+  <div class="flex flex-row justify-center space-x-6 pt-10 w-full">
     <div
       v-for="column of data.columns"
       :key="column.name"
-      class="rounded-md shadow-md bg-slate-50 px-4 w-1/4"
+      class="rounded-md shadow-md bg-slate-50 px-4"
     >
       <div class="pt-4 pl-2 font-semibold pb-3">
         {{ column.name }}
