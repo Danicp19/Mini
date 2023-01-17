@@ -60,7 +60,7 @@ function editItem(event: Event, column: Column, listIndex: number) {
     <div
       v-for="column of data.columns"
       :key="column.name"
-      class="rounded-md shadow-md bg-slate-50 px-4 w-60"
+      class="rounded-md shadow-md bg-slate-50 px-4 w-72"
     >
       <div class="pt-4 pl-2 font-semibold pb-3">
         {{ column.name }}
