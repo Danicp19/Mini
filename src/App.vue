@@ -3,6 +3,7 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 // import Navbar from './components/Navbar.vue'
 // import Favorites from './components/Favorites.vue'
+
 </script>
 
 <template>
