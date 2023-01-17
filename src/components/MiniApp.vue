@@ -49,9 +49,7 @@ function editItem(event: Event, column: Column, listIndex: number) {
   const formData = new FormData(form);
   const description = formData.get("description") as string;
 
-  column.list[listIndex].description.length == 0
-    ? deleteItem()
-    : column.list[listIndex].description = description;
+  column.list[listIndex].description = description;
 
   column.list[listIndex].editing = false;
 }
@@ -62,7 +60,7 @@ function editItem(event: Event, column: Column, listIndex: number) {
     <div
       v-for="column of data.columns"
       :key="column.name"
-      class="rounded-md shadow-md bg-slate-50 px-4 w-1/4 "
+      class="rounded-md shadow-md bg-slate-50 px-4 w-1/4"
     >
       <div class="pt-4 pl-2 font-semibold pb-3">
         {{ column.name }}
@@ -79,7 +77,7 @@ function editItem(event: Event, column: Column, listIndex: number) {
       >
         <template #item="{ element: item, index: listIndex }">
           <div
-            class="group rounded-md  bg-slate-50 py-2  flex flex-row space-x-2 items-start relative"
+            class="group rounded-md bg-slate-50 py-2 flex flex-row space-x-2 items-start relative"
           >
             <template v-if="item.editing">
               <form
@@ -126,7 +124,6 @@ function editItem(event: Event, column: Column, listIndex: number) {
             class="w-full px-3 py-2 rounded-md mb-2"
             autocomplete="off"
             value="• "
-
           />
           <!-- <button>Add</button> -->
         </form>
